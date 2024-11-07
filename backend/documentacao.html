@@ -1,0 +1,157 @@
+
+Ferramentas ultizadas:
+
+http status code:
+
+https://restfulapi.net/http-status-codes/
+
+http status codes:
+
+	200 - Ok
+	201 - Created
+	204 - No content 
+	401 - Unauthorized
+	400 - Bad Request (Somenting wrong with URL)
+	422 - Unprocesseble Content (Validations)
+	404 - Not Found 
+	403 - Forbidden
+
+Criação de Model | Factories | Migrations | Controller
+
+php artisan make:model -cfm
+
+   INFO  Model [app/Models/invoice.php] created successfully.  
+
+   INFO  Factory [database/factories/InvoiceFactory.php] created successfully.  
+
+   INFO  Migration [database/migrations/2024_07_31_220253_create_invoices_table.php] created successfully.  
+
+   INFO  Controller [app/Http/Controllers/InvoiceController.php] created successfully.  
+   
+Rodar os Seeders e as Factorys
+
+php artisan migrate
+
+  2014_10_12_000000_create_users_table .................................................................. 837ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table ................................................... 74ms DONE
+  2019_08_19_000000_create_failed_jobs_table ............................................................ 242ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table ................................................. 174ms DONE
+  2024_07_31_220253_create_invoices_table ............................................................... 230ms DONE
+  
+php artisan tinker
+#Em seguinda ponha 
+	\App\Models\User::factory(10)->create();
+#Clique 
+
+#OU Você pode rodar diretamente o seed db
+
+php artisan migrate:fresh
+
+   Dropping all tables ................................................................... 431ms DONE
+
+   INFO  Preparing database.  
+
+   Creating migration table .............................................................. 109ms DONE
+
+   INFO  Running migrations.  
+
+  2014_10_12_000000_create_users_table .................................................. 179ms DONE
+  2014_10_12_100000_create_password_reset_tokens_table ................................... 28ms DONE
+  2019_08_19_000000_create_failed_jobs_table ............................................ 117ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table ................................. 116ms DONE
+  2024_07_31_220253_create_invoices_table ............................................... 156ms DONE
+  
+
+php artisan db:seed
+ 
+  INFO  Seeding database.
+  
+
+Para controle de versão de API's criarei o seguinte diretorio na pasta Controllers 
+
+Api/v1/
+ 
+Criar a rota para listar usuarios em routes/api.php
+
+Route::get('/users', [UserController::class, 'index']);
+
+Criar o controller User já com todos os metodos dentro de uma pasta Api/v1/
+
+php artisan make:Controller Api/v1/UserController --resource
+
+INFO  Controller [app/Http/Controllers/Api/v1/UserController.php] created successfully. 
+
+Criar o controller Invoice já com todos os metodos dentro de uma pasta Api/v1/
+
+php artisan make:Controller Api/v1/InvoiceController --resource
+
+INFO  Controller [app/Http/Controllers/Api/v1/InvoiceController.php] created successfully.
+
+Agora criarei uma nomeação de rota padrão para minhas API's  em Crtl + P digitarei RouteServiceProvider e alterarei a linha 33
+
+->prefix('api')  pra  ->prefix('api/v1')
+
+Agora a rota ficará padrão como http://localhost:9000/api/v1/MeuMetodo
+
+Irei agora agrupar minhas rotas
+
+Route::prefix('v1')->group(function(){
+    Route::get('/users', [UserController::class, 'index']);
+});
+
+Obs:
+	Fiz alterações na migrations e nas factorys
+	Então rodei o seguinte comando 
+	
+	php artisan migrate:fresh --seed
+	
+	  Dropping all tables ................................................... 582ms DONE
+
+	  INFO  Preparing database.
+
+	  Creating migration table ............................................... 81ms DONE
+
+	   INFO  Running migrations.  
+
+	  2014_10_12_000000_create_users_table .................................. 126ms DONE
+	  2014_10_12_100000_create_password_reset_tokens_table ................... 41ms DONE
+	  2019_08_19_000000_create_failed_jobs_table ............................. 74ms DONE
+	  2019_12_14_000001_create_personal_access_tokens_table .................. 87ms DONE
+	  2024_07_31_220253_create_invoices_table ............................... 142ms DONE
+
+
+	   INFO  Seeding database.
+	
+	
+	O que é API Resource O API Resource é uma camada extra que usamos na API para transformar os dados que vamos enviar ao cliente. Ela permite que a estrutura de retorno seja totalmente personalizada, isso nos permite formatar os dados na melhor maneira para entregar ao cliente.
+
+
+ Cria um Resource para usuarios
+ 
+ php artisan make:resource V1/UserResource
+ 
+ Ou eu posso também criar dessa forma 
+ 
+ php artisan make:resource V1/UserResourceColletion 
+
+ E estaciar 
+ 
+ Agora criarei a Resource do Invoices
+ 
+ php artisan make:resource V1/InvoiceResource
+ 
+ Agora vou instalar as bibliotes responsaveis pela tradução pt-br
+ 
+ php artisan lang:publish
+
+   INFO  Language files published successfully.
+	 
+ composer require lucascudo/laravel-pt-br-localization --dev
+	 
+	 INFO  Downloading successfully
+	 
+ php artisan vendor:publish --tag=laravel-pt-br-localization
+ 
+	 INFO  Downloading successfully
+ 
+ 
