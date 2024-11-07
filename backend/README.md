@@ -19,3 +19,4 @@ php artisan db:seed --class=TaskSeeder
 ```
 ### OK! Finalizamos as configurações finais, basta entrar na [frontend](https://github.com/walys/laravel-svelte/tree/master/frontend) onde ira encontrar configurações finais para executar o projeto frontend
 
+### Abaixo encontrar informações adicionais a respeito dos endpoit 

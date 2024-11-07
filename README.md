@@ -2,6 +2,19 @@
 
 # Teste Pratico
 
++ Tecnologias, facilitadores e praticas usadas:
+
+    + Laralvel V: 10
+    + Sveltekit V:5
+    + Bootstrap V:5.3.3
+    + CSS
+    + HTML
+    + Sql com MYSQL V:8.0.3
+    + Docker
+    + Jquery com datatables net
+    + Descrição do Projeto
+    + Criação de EndPoints
+
 ## Passo a passo para rodar o projeto
 
 ### Clone Repositório
