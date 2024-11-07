@@ -2,8 +2,8 @@
 import jQuery from 'jquery';
 import DataTable from 'datatables.net';
 import { onMount } from 'svelte';
-import { fetchItemsTasks } from '$lib/task.js';
-import { languageSettings, swalLoad } from '$lib/util.js';
+import { fetchItemsTasks, fetchItemsTasksDel} from '$lib/task.js';
+import { languageSettings } from '$lib/util.js';
 import Modal from './Modal.svelte';
 
 let items: any[] = [];
@@ -33,7 +33,7 @@ let ValueIdTask:any = null;
                         data: null, 
                         render: function(data: any, type: any, row: { id: any; }) {
                         return `
-                            <button class="btn btn-danger delete-btn" data-id="${row["id "]}"><box-icon type='solid' name='trash'></box-icon></button>`;
+                            <button class="btn btn-danger delete-btn" data-id="${row["id"]}"><box-icon type='solid' name='trash'></box-icon></button>`;
                         }
                     }
                 ],
@@ -47,7 +47,7 @@ let ValueIdTask:any = null;
             if (jQuery.fn.dataTable.isDataTable('#myTable')){
                 jQuery('#myTableTask').DataTable().destroy(); // Destrói a instância existente
             }
-
+            
             jQuery('#myTableTask tbody').on('click', 'tr', function(event: { target: any; }) {
                 if (jQuery(event.target).closest('.edit-btn, .delete-btn').length === 0) {
                     var data = jQuery('#myTableTask').DataTable().row(this).data(); // Obtém os dados da linha clicada
@@ -66,28 +66,36 @@ let ValueIdTask:any = null;
             });
 
             // Prevenindo o redirecionamento ao clicar nos botões
-            jQuery('#myTableTask').on('click', '.btn, delete-btn', function(event: { stopPropagation: () => void; }) {
+            jQuery('#myTableTask').on('click', '.btn, delete-btn', async function(event: { stopPropagation: () => void; }) {
                 event.stopPropagation(); // Impede que o clique na linha seja disparado
                 var target = jQuery(event.target);
                 if (target.index() === 3) { // 2 é o índice da coluna "Situação"
                     event.stopPropagation(); // Impede o evento de clique na linha
                     return; // Não faz nada se a coluna "Situação" for clicada
                 }
-                var buttonId = jQuery(this).data('id'); // Obtém o ID do botão clicado
+                var btnDelete = jQuery(this).data('id'); // Obtém o ID do botão clicado
                 // Aqui você pode adicionar a lógica para o botão, como editar ou excluir
                 if (jQuery(this).hasClass('delete-btn')) {
-                    alert(`Botão delete clicado para ID: ${buttonId}`);
+                    alert(`Botão delete clicado para ID: ${btnDelete}`);
+                    const respDel = await fetchItemsTasksDel(btnDelete);
+                    if(respDel.status != 200){
+                        alert(respDel.data.message	);
+                    }else{
+                        alert(respDel.data.message);
+                        window.location.reload();
+                    }
                 }
             });
-
         } catch (error) {
             errorMessage = error instanceof Error ? error.message : 'Erro desconhecido ao buscar itens';
         }finally{
             loading = false;
+            
         }
     });
 
-    let valorParaFilho = "Este é o valor que o pai enviará!";
+    
+
     let childComponent;
     function sendIdForModalComp(idEditTask) {
         childComponent.sendIdTask(idEditTask);

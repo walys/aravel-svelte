@@ -18,7 +18,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 1,
                 'task_name' => "Task 1",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
             [
                 'id' => 2,
@@ -26,7 +26,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 2,
                 'task_name' => "Task 2",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
             [
                 'id' => 3,
@@ -34,7 +34,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 3,
                 'task_name' => "Task 3",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
             [
                 'id' => 4,
@@ -42,7 +42,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 1,
                 'task_name' => "Task 4",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
             [
                 'id' => 5,
@@ -50,7 +50,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 2,
                 'task_name' => "Task 5",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
             [
                 'id' => 6,
@@ -58,7 +58,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 3,
                 'task_name' => "Task 6",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
             [
                 'id' => 7,
@@ -66,7 +66,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 1,
                 'task_name' => "Task 7",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
             [
                 'id' => 8,
@@ -74,7 +74,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 2,
                 'task_name' => "Task 8",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
             [
                 'id' => 9,
@@ -82,7 +82,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 3,
                 'task_name' => "Task 9",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
             [
                 'id' => 10,
@@ -90,7 +90,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 1,
                 'task_name' => "Task 10",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
             [
                 'id' => 11,
@@ -98,7 +98,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 2,
                 'task_name' => "Task 11",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
             [
                 'id' => 12,
@@ -106,7 +106,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 3,
                 'task_name' => "Task 12",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
             [
                 'id' => 13,
@@ -114,7 +114,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 1,
                 'task_name' => "Task 13",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
             [
                 'id' => 14,
@@ -122,7 +122,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 2,
                 'task_name' => "Task 14",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
             [
                 'id' => 15,
@@ -130,7 +130,7 @@ class TaskSeeder extends Seeder
                 'situation_id' => 3,
                 'task_name' => "Task 15",
                 'description' => "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-                'data_tak' => "2024-11-20 20:55:41"
+                'data_tak' => "2024-11-20"
             ],
         ))->create();
     }

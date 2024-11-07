@@ -17,13 +17,14 @@ class TaskResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id ' => $this->id,
-            'user_id ' => $this->user_id,
-            'situation_id ' => $this->situation_id,
+            'id' => $this->id,
+            'user_id' => $this->user_id,
+            'situation_id' => $this->situation_id,
             'task_name' => $this->task_name,
             'description' => $this->description,
             'data_task' => Carbon::parse($this->data_task)->format('d/m/Y'),
             'situacao' => [
+                'id' =>  $this->situation_id,
                 'color' => $this->situation->color,
                 'description' => $this->situation->description,
             ],

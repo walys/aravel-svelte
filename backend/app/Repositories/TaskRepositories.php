@@ -25,14 +25,14 @@ class TaskRepositories
     public function add(Request $request)
     {
         try {
-            $data_tak = $request["data_tak"] ? $request["data_tak"] : date('Y/m/d H:i:s');
+            $data_tak = $request["data_tak"] ? $request["data_tak"] : date('Y/m/d');
             $request["data_tak"] = $data_tak;
+
             $validator = Validator::make($request->all(), [
                 'user_id' => 'required',
                 'situation_id' =>'required',
                 'task_name' =>'required|string',
                 'description' =>'required|string',
-                'data_tak' => $data_tak ?  'required|date_format:Y/m/d H:i:s' : 'nullable',
             ]);
 
             if($validator->fails()){
@@ -57,14 +57,13 @@ class TaskRepositories
     public function up(Request $request, int $id)
     {
         try {
-            $data_tak = $request["data_tak"] ? $request["data_tak"] : date('Y/m/d H:i:s');
+            $data_tak = $request["data_tak"] ? $request["data_tak"] : date('Y-m-d');
             $request["data_tak"] = $data_tak;
             $validator = Validator::make($request->all(), [
                 'user_id' => 'required',
                 'situation_id' => 'required',
                 'task_name' => 'required|string',
                 'description' =>'required|string',
-                'data_tak' => $data_tak ?  'required|date_format:Y/m/d H:i:s' : 'nullable',
             ]);
 
             if($validator->fails()){

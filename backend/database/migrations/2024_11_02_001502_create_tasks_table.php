@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('situation_id')->references('id')->on('situations');
             $table->text('task_name');
             $table->longText('description');
-            $table->datetime('data_tak')->nullable();
+            $table->date('data_tak')->nullable();
             $table->timestamps();
         });
     }

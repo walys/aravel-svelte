@@ -17,3 +17,4 @@ php artisan db:seed --class=SituationSeeder
 ```sh
 php artisan db:seed --class=TaskSeeder
 ```
+

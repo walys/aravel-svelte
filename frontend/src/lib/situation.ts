@@ -18,11 +18,8 @@ export async function fetchItemSitaution() {
         }
 
         const data = await response.json();
-        console.log('minha lib', data.data);
         return data.data;
-        // items = data.data; // Ajuste conforme a estrutura da sua resposta
     } catch (error) {
         console.error('Erro ao buscar itens:', error);
-        // errorMessage = error instanceof Error ? error.message : 'Erro desconhecido ao buscar itens';
     }
 }
