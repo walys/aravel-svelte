@@ -1,34 +1,4 @@
-<div style="display: inline_block"><br>
-
-<img align="center" alt="laravel" height="30" width="40" 
-src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original-wordmark.svg" />
-
-<img align="center" alt="Php" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" />
-
-<img align="center" alt="svelte" height="30" width="40" 
-  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg" />
-
-<img align="center" alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-
-<img align="center" alt="jquery" height="30" width="40" 
-src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original-wordmark.svg" />
-
-
-  <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-
-
-  <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-
-
-  <img align="center" alt="Bootstrap" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
-
-<img align="center" alt="mysql" height="30" width="40" 
-src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
-
-<img align="center" alt="docker" height="30" width="40" 
-src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" />
-
-
+<p align="center"><a href="#" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPkWVOp7SSTpIMYJxeIKvG2PGQaOp8FxHufya_oucqJO1bkhqUAfu8wx_qpbYd_Mqr0lM&usqp=CAU" width="400" alt="Laravel Logo"></a></p>
 
 # Teste Pratico
 
@@ -39,38 +9,13 @@ src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-ori
 git clone https://github.com/walys/laravel-svelte.git
 ```
 
-### Entre no diretorio laravel-svelte.
+### Entre no diretorio laravel-svelte/backend para a execução do ambiente docker para gera os containeres necessarioas para montar e configurar o ambiente backend.
 ```sh
 cd laravel-svelte/backend
 ```
 
-### Execute os seguintes comandos docker dentro da pasta
-```sh
-docker-compose build
-```
-```sh
-docker-compose up -d
-```
+### Crie o Arquivo .env dentro da pasta project
 
-### Apos os dois comandos executados, rode os comandos abaixo
-
-Encontre o id_container com a imagem de nome laravel-svelte_laravel_svelte-docker
-```sh
- docker ps -a
-```
-
-Execute e entre no container
-```sh
-docker exec -it id_container sh
-```
-### Em outro terminal dentro da pasta projeto rode o seguinte comando
-
-Ao entrar execute esse comando para dar as devidas permissões
-```sh
-chown www-data:www-data -R ./storage
-```
-
-Crie o Arquivo .env dentro da pasta project
 ```sh
 cp .env.example .env
 ```
@@ -80,7 +25,7 @@ cp .env.example .env
 APP_NAME=Laravel - Teste Pratico
 APP_KEY=base64:a0N/Tf+B5YQqb+yI8e63OlP9sHLRUl2QAn4/I5T1Jfs=
 APP_DEBUG=true
-APP_URL=http://localhost:9000/
+APP_URL=http://localhost:8000/api/V1/
 
 DB_CONNECTION=mysql
 DB_HOST=admin_mysql_db
@@ -89,23 +34,58 @@ DB_DATABASE=test_pratice
 DB_USERNAME=root
 DB_PASSWORD=root
 ```
-# Atenção!!!
 
-### Para finalizar as configurações restantes acesse a documentação desntro de [projeto] e [frontend]
-
-Acesse o projeto laravel apartir desse link
-[http://localhost:9000/](http://localhost:9000/)
-
-Acesse a aplicação web phpmyadmin atravez do link
-[http://localhost:9001](http://localhost:9001)
-
-
-Usuário
+### Dentro laravel-svelte/backend execute os seguintes comandos docker dentro da pasta
 ```sh
-root
+docker-compose build
+```
+```sh
+docker-compose up -d
 ```
 
-Senha
+### Apos os dois comandos executados, rode os comandos abaixo
+
+### Encontre o id_container com a imagem de nome laravel-svelte_laravel_svelte-docker
 ```sh
-root
+ docker ps -a
+```
+
+### Execute e entre no container
+```sh
+docker exec -it id_container sh
+```
+### Em outro terminal dentro da pasta projeto rode o seguinte comando
+
+### Ao entrar execute esse comando para dar as devidas permissões
+
+```sh
+chown www-data:www-data -R ./storage
+```
+
+
+# Atenção!!!
+
+### Para finalizar as configurações restantes acesse a documentação desntro de [backend](https://github.com/walys/laravel-svelte/tree/master/backend) e [frontend](https://github.com/walys/laravel-svelte/tree/master/frontend) , exatamente nessa ordem.
+
+## Acesse o projeto laravel apartir desse link
+[http://localhost:8000/api/V1/](http://localhost:8000/api/V1/)
+
+## Acesse a aplicação web phpmyadmin atravez do link
+[http://localhost:8080/](http://localhost:8080/)
+
+### Apos tudo configurado basta acessar a tela de login e logar com as seguintes credenciais:
+
+## Acessando essa rota url você sera direcionado para a tela de login
+```sh
+http://localhost:5173/
+```
+
+## E-mail:
+```sh
+user@email.com
+```
+
+## Senha:
+```sh
+123456
 ```
